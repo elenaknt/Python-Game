@@ -74,16 +74,16 @@ def arxi_paixnidiou(apanthsh):
     apanthsh --> Τιμή string για δήλωση απάντησης.
     """
     if apanthsh=="N":
-        temp=int(input("Δώστε ακέραιο αριθμό στηλών/γραμμών ανάμεσα σε 5 και 10: "))
+        temp=int(input("Enter an integer between 5 and 10 (rows/columns): "))
         while temp<5 or temp>10 or int(temp)!=temp:
-            temp=int(input("Δώστε ακέραιο αριθμό στηλών/γραμμών ανάμεσα σε 5 και 10: "))
+            temp=int(input("Enter an integer between 5 and 10 (rows/columns): "))
         sthles=temp
         pinakas=tamplo(sthles)
         g1(sthles,pinakas)
         s1=0
         s2=0
     elif apanthsh=="S":
-        onoma=input("Δώστε το όνομα του αποθηκευμένου αρχείου: ")
+        onoma=input("Enter the file name: ")
         sthles,pinakas,s1,s2=fortwsh(onoma)
         g1(sthles,pinakas)
     return pinakas,sthles,s1,s2

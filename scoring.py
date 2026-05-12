@@ -1,13 +1,13 @@
 def nikhths(s1,s2):
     """
     >>> nikhths(10,11) #doctest: +SKIP
-    "Μπράβο παίκτη 2! Νίκησες το παιχνίδι!"
+    "Congratulations! Player 2 is the winner!"
     >>> nikhths(20,11) #doctest: +SKIP
-    "Μπράβο παίκτη 1! Νίκησες το παιχνίδι!"
+    "Congratulations! Player 1 is the winner!"
     >>> nikhths(10,10) #doctest: +SKIP
-    "Μπράβο και στους δύο! Το παιχνίδι έληξε με ισοπαλία!"
+    "The game ended in a draw. No winner this time!"
     >>> nikhths(0,0) #doctest: +SKIP
-    "Δεν υπήρξε νικητής!"
+    "The game ended in a draw. No winner this time!"
     """
     """
     Παίρνει τα τελικά σκορ κάθε παίκτη τα εμφανίζει και έπειτα 
@@ -16,17 +16,16 @@ def nikhths(s1,s2):
     οπότε το παιχνίδι δεν μπορεί να συνεχιστεί και ζητείται 
     η αποθήκευση του.
     """
-    print("Τελικό σκορ: ",s1,"-",s2)                        
+    print("Final score: ",s1,"-",s2)                        
     if s1>s2:
-        print("Μπράβο παίκτη 1! Νίκησες το παιχνίδι!")
+        print("Congratulations! Player 1 is the winner!")
     elif s2>s1:
-        print("Μπράβο παίκτη 2! Νίκησες το παιχνίδι!")
+        print("Congratulations! Player 2 is the winner!")
     elif s1==s2:
-        print("Μπράβο και στους δύο! Το παιχνίδι έληξε με ισοπαλία!")
-    elif s1==0 and s2==0:
-        print("Δεν υπήρξε νικητής!")
+        print("The game ended in a draw. No winner this time!")
+    
     while w!="s":                                           
-        w=input('Παρακαλώ πατήστε το πλήκτρο "s" για αποθήκευση του παιχνιδιού! ')
+        w=input("Press 's' to save the game: ")
     return w
 
 def mhdenismos(pinakas,sthles):
@@ -122,15 +121,15 @@ def score2(s2,pinakas,sthles):
 def gyroi(four1,four2):  
     """
     >>> gyroi(True,False)
-    Ο παίκτης 1 είναι ο νικητής του γύρου!
+    "Congratulations! Player 1 is the winner!"
     >>> gyroi(False,True)
-    Ο παίκτης 2 είναι ο νικητής του γύρου!
+    "Congratulations! Player 2 is the winner!"
     """                       
     """
     Εμφανίζει τον νικητή του κάθε γύρου.
     four1, four2 --> Λογικές τιμές για το ποιός κέρδισε τον γύρο.
     """
     if four1==True:
-        print("Ο παίκτης 1 είναι ο νικητής του γύρου!")
+        print("Congratulations! Player 1 is the winner!")
     elif four2==True:
-        print("Ο παίκτης 2 είναι ο νικητής του γύρου!")
+        print("Congratulations! Player 2 is the winner!")
